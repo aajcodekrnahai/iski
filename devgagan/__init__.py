@@ -23,8 +23,8 @@ app = Client(
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
-    workers=27,
-    sleep_threshold=20,
+    workers=50,
+    sleep_threshold=30,
     max_concurrent_transmissions=1000
 )
 
