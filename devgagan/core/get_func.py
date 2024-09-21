@@ -1,4 +1,5 @@
-#devggn
+
+#kingofpatal
 import re
 import asyncio
 import time
@@ -50,26 +51,26 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
                 if msg.media == MessageMediaType.WEB_PAGE:
                     target_chat_id = user_chat_ids.get(chatx, chatx)
                     edit = await app.edit_message_text(target_chat_id, edit_id, "Cloning...")
-                    devggn = await app.send_message(sender, msg.text.markdown)
+                    kingofpatal = await app.send_message(sender, msg.text.markdown)
                     if msg.pinned_message:
                         try:
-                            await devggn.pin(both_sides=True)
+                            await kingofpatal.pin(both_sides=True)
                         except Exception as e:
-                            await devggn.pin()
-                    await devggn.copy(LOG_GROUP)                  
+                            await kingofpatal.pin()
+                    await kingofpatal.copy(LOG_GROUP)                  
                     await edit.delete()
                     return
             if not msg.media:
                 if msg.text:
                     target_chat_id = user_chat_ids.get(chatx, chatx)
                     edit = await app.edit_message_text(target_chat_id, edit_id, "Cloning...")
-                    devggn = await app.send_message(sender, msg.text.markdown)
+                    kingofpatal = await app.send_message(sender, msg.text.markdown)
                     if msg.pinned_message:
                         try:
-                            await devggn.pin(both_sides=True)
+                            await kingofpatal.pin(both_sides=True)
                         except Exception as e:
-                            await devggn.pin()
-                    await devggn.copy(LOG_GROUP)
+                            await kingofpatal.pin()
+                    await kingofpatal.copy(LOG_GROUP)
                     await edit.delete()
                     return
             
@@ -129,13 +130,13 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
                 duration= metadata['duration']
 
                 if duration <= 300:
-                    devggn = await app.send_video(chat_id=sender, video=file, caption=caption, height=height, width=width, duration=duration, thumb=None, progress=progress_bar, progress_args=('**UPLOADING:**\n', edit, time.time())) 
+                    kingofpatal = await app.send_video(chat_id=sender, video=file, caption=caption, height=height, width=width, duration=duration, thumb=None, progress=progress_bar, progress_args=('**UPLOADING:**\n', edit, time.time())) 
                     if msg.pinned_message:
                         try:
-                            await devggn.pin(both_sides=True)
+                            await kingofpatal.pin(both_sides=True)
                         except Exception as e:
-                            await devggn.pin()
-                    await devggn.copy(LOG_GROUP)
+                            await kingofpatal.pin()
+                    await kingofpatal.copy(LOG_GROUP)
                     await edit.delete()
                     return
                 
@@ -160,7 +161,7 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
                 
                 thumb_path = await screenshot(file, duration, chatx)              
                 try:
-                    devggn = await app.send_video(
+                    kingofpatal = await app.send_video(
                         chat_id=target_chat_id,
                         video=file,
                         caption=caption,
@@ -178,10 +179,10 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
                        )
                     if msg.pinned_message:
                         try:
-                            await devggn.pin(both_sides=True)
+                            await kingofpatal.pin(both_sides=True)
                         except Exception as e:
-                            await devggn.pin()
-                    await devggn.copy(LOG_GROUP)
+                            await kingofpatal.pin()
+                    await kingofpatal.copy(LOG_GROUP)
                 except:
                     await app.edit_message_text(sender, edit_id, "The bot is not an admin in the specified chat.")
 
@@ -207,13 +208,13 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
                 caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}"
 
                 target_chat_id = user_chat_ids.get(sender, sender)
-                devggn = await app.send_photo(chat_id=target_chat_id, photo=file, caption=caption)
+                kingofpatal = await app.send_photo(chat_id=target_chat_id, photo=file, caption=caption)
                 if msg.pinned_message:
                     try:
-                        await devggn.pin(both_sides=True)
+                        await kingofpatal.pin(both_sides=True)
                     except Exception as e:
-                        await devggn.pin()                
-                await devggn.copy(LOG_GROUP)
+                        await kingofpatal.pin()                
+                await kingofpatal.copy(LOG_GROUP)
             else:
                 thumb_path = thumbnail(chatx)
                 delete_words = load_delete_words(sender)
@@ -235,7 +236,7 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
 
                 target_chat_id = user_chat_ids.get(chatx, chatx)
                 try:
-                    devggn = await app.send_document(
+                    kingofpatal = await app.send_document(
                         chat_id=target_chat_id,
                         document=file,
                         caption=caption,
@@ -249,11 +250,11 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
                     )
                     if msg.pinned_message:
                         try:
-                            await devggn.pin(both_sides=True)
+                            await kingofpatal.pin(both_sides=True)
                         except Exception as e:
-                            await devggn.pin()
+                            await kingofpatal.pin()
 
-                    await devggn.copy(LOG_GROUP)
+                    await kingofpatal.copy(LOG_GROUP)
                 except:
                     await app.edit_message_text(sender, edit_id, "The bot is not an admin in the specified chat.") 
                 
@@ -443,8 +444,8 @@ async def set_rename_command(user_id, custom_rename_tag):
 
 # Function to get the user's custom renaming preference
 def get_user_rename_preference(user_id):
-    # Retrieve the user's custom renaming tag if set, or default to '@devggn'
-    return user_rename_preferences.get(str(user_id), '@devggn')
+    # Retrieve the user's custom renaming tag if set, or default to '@kingofpatal'
+    return user_rename_preferences.get(str(user_id), '@kingofpatal')
 
 # Function to set custom caption preference
 async def set_caption_command(user_id, custom_caption):
@@ -471,7 +472,7 @@ async def settings_command(event):
         [Button.inline("Remove Words", b'delete'), Button.inline("Reset", b'reset')],
         [Button.inline("Login", b'addsession'), Button.inline("Logout", b'logout')],
         [Button.inline("Set Thumbnail", b'setthumb'), Button.inline("Remove Thumbnail", b'remthumb')],
-        [Button.url("Report Errors", "https://t.me/devggn")]
+        [Button.url("Report Errors", "https://t.me/kingofpatal")]
     ]
     
     await gf.send_file(
