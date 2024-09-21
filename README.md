@@ -2,17 +2,12 @@
   <b>Save restricted Content Bot master-V1 branch</b> | Summer Release V2
 </h1>
 
+# Iski Bot
 
-# Save Restricted Content Bot
+Iski Bot by Team SPY.
 
-Save Restricted Content Bot by Team SPY.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/aajcodekrnahai/iski)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/brucewaynepioneer/stunning-sniffle)
-
-
-Contact: [Telegram](https://t.me/devggn)
-
----
 
 ## ABOUT THIS BRANCH
 This branch is purely based on `Pyrogram V2` with more stability
